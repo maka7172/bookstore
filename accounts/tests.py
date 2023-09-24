@@ -2,6 +2,9 @@ from django.test import TestCase
 from django.urls import reverse
 
 
-# class UserTesting(TestCase) :
-#     def 
+class SignupPageTesting(TestCase) :
 
+
+    def test_signup_url_by_name (self) :
+        response = self.client.get(reverse('signup'))
+        self.assertEqual(response.status_code,200) 
