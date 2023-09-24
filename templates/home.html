@@ -9,10 +9,10 @@ home
 
 {% if user.is_authenticated %}
 
-<h1>welcome {{user.username}}</h1>| <a href="{% url 'logout' %}">logout</a>
+<p><h1>welcome {{user.username}}</h1>| <a href="{% url 'logout' %}">logout</a></p>
 
 {% else %}
-<a href="{% url 'login' %}">login</a> | <a href="{% url 'signup' %}">signup</a>
+<p><a href="{% url 'login' %}">login</a> | <a href="{% url 'signup' %}">signup</a></p>
 {% endif %}
 
 
