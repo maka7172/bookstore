@@ -20,7 +20,7 @@ class SignupPageTesting(TestCase) :
         response = self.client.get(reverse('signup'))
         self.assertTemplateUsed(response,'registration/signup.html')
 
-    def test_signup_redirect(self) :
+    def test_signup_object(self) :
         User = get_user_model().objects.create_user(self.username,self.email)
             
         
